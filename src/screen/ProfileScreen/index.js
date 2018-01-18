@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableHighlight,TouchableOpacity,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,TouchableOpacity,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -151,7 +151,7 @@ class DepositScreen extends React.Component {
                         <KeyboardAwareScrollView
                             contentContainerStyle={{flex:1}}
                              resetScrollToCoords={{ x: 0, y: 0 }}
-                            scrollEnabled={false}   extraHeight={350} >
+                            scrollEnabled={false}   extraHeight={Dimensions.get('window').height/2} >
                         {
                             this.state.activeWindow == "0"
                             ?
@@ -181,7 +181,7 @@ class DepositScreen extends React.Component {
                                     </View> 
                                 </View>
                                 <View style={{flex:0.7}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Verify</Text>
                                     </RkButton>
                                 </View>
@@ -207,7 +207,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username1}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -233,7 +233,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' style={styles.username1}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -259,7 +259,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' secureTextEntry={true} style={styles.username1}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>

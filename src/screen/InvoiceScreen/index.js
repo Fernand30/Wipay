@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -114,7 +114,7 @@ class DepositScreen extends React.Component {
                        <KeyboardAwareScrollView
                             contentContainerStyle={{flex:1}}
                              resetScrollToCoords={{ x: 0, y: 0 }}
-                            scrollEnabled={true}  extraHeight={0} >
+                            scrollEnabled={true}  extraHeight={Dimensions.get('window').height/3} >
                             <View style={{flex:1,paddingTop:10, justifyContent:'space-between'}}>
                                 <View style={{width:'70%',alignSelf:'center'}}>
                                     <Text style={styles.forgot}>Recipient Amount:</Text>
@@ -133,7 +133,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' style={styles.username}></TextInput>
                                 </View>
                                 <View >
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>

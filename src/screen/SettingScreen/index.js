@@ -100,27 +100,27 @@ class HomeScreen extends React.Component {
                                                                    
                             <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
                                 <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>PIN</Text>
-                                <Switch onValueChange = {this.toggleSwitch1}
+                                <Switch onValueChange={ (value) => this.setState({ switch1Value: !this.state.switch1Value })} 
                                         value = {this.state.switch1Value}/> 
                             </View>  
                             <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
                                 <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Enroll Fingerprint</Text>
-                                <Switch onValueChange = {this.toggleSwitch2}
+                                <Switch onValueChange={ (value) => this.setState({ switch2Value: !this.state.switch2Value })} 
                                         value = {this.state.switch2Value}/> 
                             </View>  
                             <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
                                 <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Enroll Wipay card</Text>
-                                <Switch onValueChange = {this.toggleSwitch3}
+                                <Switch onValueChange={ (value) => this.setState({ switch3Value: !this.state.switch3Value })} 
                                         value = {this.state.switch3Value}/> 
                             </View>  
                             <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
                                 <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Enroll facial recognition</Text>
-                                <Switch onValueChange = {this.toggleSwitch4}
+                                <Switch onValueChange={ (value) => this.setState({ switch4Value: !this.state.switch4Value })} 
                                         value = {this.state.switch4Value}/> 
                             </View>                    
                             <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
                                 <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Saved Documents</Text>
-                                <Switch onValueChange = {this.toggleSwitch5}
+                                <Switch onValueChange={ (value) => this.setState({ switch5Value: !this.state.switch5Value })} 
                                         value = {this.state.switch5Value}/> 
                             </View>  
 

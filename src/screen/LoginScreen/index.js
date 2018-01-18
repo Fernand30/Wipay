@@ -51,7 +51,7 @@ class LoginScreen extends React.Component {
                         <TextInput style={styles.username} secureTextEntry={true} underlineColorAndroid="transparent" placeholderTextColor="white" placeholder="Password"></TextInput>
                     </View>
                     <View style={{flex:2}}>
-                        <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                        <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                             <Text style={{color:'white',fontSize:25,fontWeight:'600'}}>Login</Text>
                         </RkButton>
                     </View>
@@ -59,7 +59,7 @@ class LoginScreen extends React.Component {
                         <Text style={styles.forgot}>Forgot your password ?</Text>
                     </View>
                     <View style={{alignItems:'center',}}>
-                      <RkButton style={{backgroundColor:'transparent'}} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                      <RkButton style={{backgroundColor:'transparent'}} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                         <Image
                             source={fingerprint}
                             style={{

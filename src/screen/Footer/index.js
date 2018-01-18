@@ -27,7 +27,7 @@ class FooterScreen extends React.Component {
                         flexDirection:'row',
                         justifyContent:'space-between',
                     }}>
-                <TouchableOpacity style={{alignSelf:'center'}} onPress={ () => this.props.navigation.navigate('HomeScreen')}>
+                <TouchableOpacity style={{alignSelf:'center'}} onPress={ () => this.props.navigation.navigate('WipayScreen')}>
                     <View>
                         <View style={{height: 3,width:55,backgroundColor: 'transparent',alignSelf:'center'}}></View>
                         <Image style={styles.footerStyle} source={home} />

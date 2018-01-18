@@ -85,26 +85,16 @@ class HomeScreen extends React.Component {
                     />
                     <View style={styles.container}>
                     <View style={{flex:5}}>
-                        <View style={{flex:4}}>
                             <Text style={styles.wipay}>WIPAY</Text>
                             <Text style={styles.login}>Account Balance</Text>
                             <Text style={styles.totalText}>$2500TT</Text>
-                        </View>
-                        <View style={{flex:1}}>
                             <Text style={styles.forgot}>KYC Level 1</Text>
-                        </View>
                         <Image
                             source={shape}
-                            style={{
-                                width:'10%',
-                                height:'7%',
-                                position:'absolute',
-                                bottom:0,
-                                right: 175,
-                            }}
+                            style={styles.shapeImage}
                         />
                     </View>
-                        <View style={{flex:5,backgroundColor:'white'}}>
+                        <View style={{flex:8,backgroundColor:'white'}}>
                             <View style={{
                                             flex:1,
                                             flexDirection:'row',

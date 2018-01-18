@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -11,6 +11,7 @@ import FooterScreen from '../Footer'
 import loginback from '../../images/body-bg.png'
 import menu from '../../images/menu.png'
 import setting from '../../images/setting.png'
+
 
 class DepositScreen extends React.Component {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -151,7 +152,7 @@ class DepositScreen extends React.Component {
                         <KeyboardAwareScrollView
                             contentContainerStyle={{flex:1}}
                              resetScrollToCoords={{ x: 0, y: 0 }}
-                            scrollEnabled={false} extraScrollHeight={250} >
+                            scrollEnabled={false} extraScrollHeight={Dimensions.get('window').height/2.5} >
                         {
                             this.state.activeWindow == "0"
                             ?
@@ -162,7 +163,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -215,7 +216,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -235,7 +236,7 @@ class DepositScreen extends React.Component {
                                 <View style={{flex:1,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Wipay Serial #</Text>
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username}></TextInput>
-                                    <RkButton style={[styles.loginButton,{marginTop:8}]} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={[styles.loginButton,{marginTop:8}]} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>

@@ -211,7 +211,7 @@ class HomeScreen extends React.Component {
                                     style={{flexDirection:'column',justifyContent:'center',flex:1,borderColor:'white',borderBottomWidth:1,borderRightWidth:1}}>
                                     <View>
                                         <Image source={creditcard} style={{height:40,alignSelf:'center',width:40}} />
-                                        <Text style={{alignSelf:'center',color:'white',marginTop:6}}>Get Cash</Text>
+                                        <Text style={{alignSelf:'center',color:'white',marginTop:6}}>Gift Card</Text>
                                     </View>
                                 </TouchableOpacity>
                             </View>

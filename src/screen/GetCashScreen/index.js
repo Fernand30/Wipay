@@ -152,7 +152,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -178,7 +178,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' style={styles.username1}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -202,7 +202,7 @@ class DepositScreen extends React.Component {
                                     <TextInput underlineColorAndroid='transparent' style={styles.username}></TextInput>
                                 </View>
                                 <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>
@@ -222,7 +222,7 @@ class DepositScreen extends React.Component {
                                 <View style={{flex:3,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Wipay Serial #</Text>
                                     <TextInput underlineColorAndroid='transparent' style={styles.username}></TextInput>
-                                    <RkButton style={[styles.loginButton,{marginTop:8}]} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                                    <RkButton style={[styles.loginButton,{marginTop:8}]} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
                                     </RkButton>
                                 </View>

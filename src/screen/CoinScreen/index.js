@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -29,7 +29,8 @@ class DepositScreen extends React.Component {
                 height: 70,
                 paddingLeft: 10,
                 paddingRight: 10,
-                alignSelf:'auto'
+                alignSelf:'auto',
+                
             }
         });
     };
@@ -38,7 +39,8 @@ class DepositScreen extends React.Component {
         super();
         this.state = {
             isOpen:false,
-            activeWindow:"0"
+            activeWindow:"0",
+            myNumber:''
         };        
     }
 
@@ -70,6 +72,22 @@ class DepositScreen extends React.Component {
         });
         const { navigate } = this.props.navigation;
         this.props.navigation.navigate(item);
+    }
+
+    onChanged(text){
+        let newText = '';
+        let numbers = '0123456789';
+
+        for (var i=0; i < text.length; i++) {
+            if(numbers.indexOf(text[i]) > -1 ) {
+                newText = newText + text[i];
+            }
+            else {
+                // your call back function
+                //alert("please enter numbers only");
+            }
+        }
+        this.setState({ myNumber: newText });
     }
 
     render() {
@@ -139,29 +157,32 @@ class DepositScreen extends React.Component {
                         <KeyboardAwareScrollView
                     contentContainerStyle={{flex:1}}
                      resetScrollToCoords={{ x: 0, y: 0 }}
-                    scrollEnabled={false}   extraScrollHeight={260} >
+                    scrollEnabled={false}   extraScrollHeight={Dimensions.get('window').height/2.5} >
                         {
                             this.state.activeWindow == "0"
                             ?
-                            <View style={{flex:1,paddingTop:5}}>
+                            <View style={{flex:1,paddingTop:10}}>
                                 <View style={styles.rowView}>
                                     <Text style={styles.forgot}>WiCoin I TTD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <View style={styles.rowView}>
-                                    <Text style={styles.forgot}>WiCoin I TTD</Text>
+                                    <Text style={styles.forgot}>WiCoin I JMD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <View style={styles.rowView}>
-                                    <Text style={styles.forgot}>WiCoin I TTD</Text>
+                                    <Text style={styles.forgot}>WiCoin I BBD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <Text style={styles.amountsell}>Enter WiCoin Amount to Sell</Text>
-                                <Text style={styles.wicon}>Wicoins</Text>
-                                <TextInput underlineColorAndroid='transparent' placeholder="WiCoin Amount" style={styles.username}></TextInput>
-                                <Text style={styles.wicon}>TDD</Text>
-                                <TextInput underlineColorAndroid='transparent' placeholder="TDD Amount" style={styles.username}></TextInput>
-                                <View style={{marginTop:5}}>
+                                
+                                <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done"  placeholder="WiCoin Amount" style={styles.username}
+                                    onChangeText={(text)=> this.onChanged(text)}
+                                    value={this.state.myNumber}/>
+                                
+                                <TextInput underlineColorAndroid='transparent' editable={false} placeholder="TDD Amount" style={styles.username}/>
+                                    
+                                <View style={{marginTop:15}}>
                                     <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Buy</Text>
                                     </RkButton>
@@ -173,25 +194,28 @@ class DepositScreen extends React.Component {
                         {
                             this.state.activeWindow == "1"
                             ?
-                            <View style={{flex:1,paddingTop:5}}>
+                            <View style={{flex:1,paddingTop:10}}>
                                 <View style={styles.rowView}>
                                     <Text style={styles.forgot}>WiCoin I TTD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <View style={styles.rowView}>
-                                    <Text style={styles.forgot}>WiCoin I TTD</Text>
+                                    <Text style={styles.forgot}>WiCoin I JMD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <View style={styles.rowView}>
-                                    <Text style={styles.forgot}>WiCoin I TTD</Text>
+                                    <Text style={styles.forgot}>WiCoin I BBD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <Text style={styles.amountsell}>Enter WiCoin Amount to Sell</Text>
-                                <Text style={styles.wicon}>Wicoins</Text>
-                                <TextInput underlineColorAndroid='transparent' placeholder="WiCoin Amount" style={styles.username}></TextInput>
-                                <Text style={styles.wicon}>TDD</Text>
-                                <TextInput underlineColorAndroid='transparent' placeholder="TDD Amount" style={styles.username}></TextInput>
-                                <View style={{marginTop:5}}>
+                                
+                                <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done"  placeholder="WiCoin Amount" style={styles.username}
+                                    onChangeText={(text)=> this.onChanged(text)}
+                                    value={this.state.myNumber}/>
+                                
+                                <TextInput underlineColorAndroid='transparent' editable={false} placeholder="TDD Amount" style={styles.username}/>
+                                    
+                                <View style={{marginTop:15}}>
                                     <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
                                         <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Sell</Text>
                                     </RkButton>
@@ -203,27 +227,30 @@ class DepositScreen extends React.Component {
                         {
                             this.state.activeWindow == "2"
                             ?
-                            <View style={{flex:1,paddingTop:5}}>
+                            <View style={{flex:1,paddingTop:10}}>
                                 <View style={styles.rowView}>
                                     <Text style={styles.forgot}>WiCoin I TTD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <View style={styles.rowView}>
-                                    <Text style={styles.forgot}>WiCoin I TTD</Text>
+                                    <Text style={styles.forgot}>WiCoin I JMD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <View style={styles.rowView}>
-                                    <Text style={styles.forgot}>WiCoin I TTD</Text>
+                                    <Text style={styles.forgot}>WiCoin I BBD</Text>
                                     <Text style={styles.forgot}>6.8</Text>
                                 </View>
                                 <Text style={styles.amountsell}>Enter WiCoin Amount to Sell</Text>
-                                <Text style={styles.wicon}>Wicoins</Text>
-                                <TextInput underlineColorAndroid='transparent' placeholder="WiCoin Amount" style={styles.username}></TextInput>
-                                <Text style={styles.wicon}>TDD</Text>
-                                <TextInput underlineColorAndroid='transparent' placeholder="TDD Amount" style={styles.username}></TextInput>
-                                <View style={{marginTop:5}}>
+                                
+                                <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done"  placeholder="WiCoin Amount" style={styles.username}
+                                    onChangeText={(text)=> this.onChanged(text)}
+                                    value={this.state.myNumber}/>
+                                
+                                <TextInput underlineColorAndroid='transparent' editable={false} placeholder="TDD Amount" style={styles.username}/>
+                                    
+                                <View style={{marginTop:15}}>
                                     <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Transter</Text>
+                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Transfer</Text>
                                     </RkButton>
                                 </View>
                             </View>

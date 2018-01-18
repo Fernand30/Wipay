@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { Dimensions } from "react-native"
 
 const styles = {
     container: {
@@ -17,7 +18,14 @@ const styles = {
         fontSize:35,
         fontWeight:'600',
         alignSelf:'center',
-        marginTop:20
+        marginTop:10
+    },
+    shapeImage:{
+        width:'10%',
+        height:'8%',
+        position:'absolute',
+        bottom:0,
+        right: Dimensions.get('window').width/2-Dimensions.get('window').width*0.05
     },
     login:{
     	color:'white',
@@ -44,7 +52,8 @@ const styles = {
     	color:'white',
     	fontSize:18,
     	fontWeight:'400',
-    	alignSelf:'center'
+    	alignSelf:'center',
+        marginTop: 20
     },
     line:{
         height:2,
