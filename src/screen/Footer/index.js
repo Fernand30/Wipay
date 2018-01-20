@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableOpacity,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableOpacity,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import { RkText, RkTheme, RkButton} from 'react-native-ui-kitten';
 import home from '../../images/home.png'
@@ -29,30 +29,30 @@ class FooterScreen extends React.Component {
                     }}>
                 <TouchableOpacity style={{alignSelf:'center'}} onPress={ () => this.props.navigation.navigate('WipayScreen')}>
                     <View>
-                        <View style={{height: 3,width:55,backgroundColor: 'transparent',alignSelf:'center'}}></View>
+                        <View style={styles.eachView}></View>
                         <Image style={styles.footerStyle} source={home} />
-                        <RkText style={{fontSize:12,alignSelf:'center',marginTop:5,marginBottom:5,fontWeight:'300', color:'black'}}>HOME</RkText>
+                        <RkText style={styles.eachText}>HOME</RkText>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity   onPress={ () => this.props.navigation.navigate('QrScreen')}>
                     <View style={{alignSelf:'center'}}>
-                        <View style={{height: 3,width:55,backgroundColor: 'transparent',alignSelf:'center'}}></View>
+                        <View style={styles.eachView}></View>
                         <Image style={styles.footerStyle} source={qrcode} />
-                        <RkText style={{fontSize:12,alignSelf:'center',marginTop:5,marginBottom:5,fontWeight:'300', color:'black'}}>MY QR</RkText>
+                        <RkText style={styles.eachText}>MY QR</RkText>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity  onPress={ () => this.props.navigation.navigate('CoinScreen')}>
                     <View style={{alignSelf:'center'}}>
-                        <View style={{height: 3,width:55,backgroundColor: 'transparent',alignSelf:'center'}}></View>
+                        <View style={styles.eachView}></View>
                         <Image style={styles.footerStyle} source={bitcoin} />
-                        <RkText style={{fontSize:12,alignSelf:'center',marginTop:5,marginBottom:5,fontWeight:'300', color:'black'}}>COIN</RkText>
+                        <RkText style={styles.eachText}>COIN</RkText>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity  onPress={ () => {}}>
                 <View style={{alignSelf:'center'}}>
-                    <View style={{height: 3,width:55,backgroundColor: 'transparent',alignSelf:'center'}}></View>
+                    <View style={styles.eachView}></View>
                     <Image style={styles.footerStyle} source={barcode} />
-                    <RkText style={{fontSize:12,alignSelf:'center',marginTop:5,marginBottom:5,fontWeight:'300', color:'black'}}>SCAN</RkText>
+                    <RkText style={styles.eachText}>SCAN</RkText>
                     </View>
                 </TouchableOpacity>
             </View>

@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const styles = {
     container: {
@@ -6,10 +7,25 @@ const styles = {
         backgroundColor:'transparent',
     },
     wipay:{
-    	color:'white',
-    	fontSize:45,
-    	fontWeight:'300',
-    	alignSelf:'center',
+        color:'white',
+        fontSize:responsiveFontSize(5),
+        fontWeight:'300',
+        alignSelf:'center',
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
+      alignSelf:'center',
+      fontWeight:'300'
+    },
+    topView:{
+        flex:2.5,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     login:{
     	color:'white',
@@ -22,22 +38,49 @@ const styles = {
     	alignSelf:'center',
     	borderBottomWidth:2,
     	borderColor:'#ddd',
-    	fontSize:22,
-    	paddingBottom:8,
+    	fontSize:responsiveFontSize(2),
+    	paddingBottom:5,
+        height: responsiveHeight(6),
     	color:'black'
     },
-    loginButton:{
-    	
-    	height:40,
+    submitButton:{
+    	marginTop:responsiveHeight(10),
+    	height:responsiveHeight(6),
     	alignSelf:'center',
-    	borderRadius:15,
+    	borderRadius:responsiveHeight(2),
         backgroundColor:'transparent',
         borderColor:'rgb(0,138,220)',
-        borderWidth:1
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitButton1:{
+        marginTop:responsiveHeight(2),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitButton2:{
+        marginTop:responsiveHeight(2),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitText:{
+        color:'rgb(0,168,220)',
+        fontSize:responsiveFontSize(3),
+        fontWeight:'300'
     },
     forgot:{
     	color:'grey',
-    	fontSize:14,
+    	fontSize:responsiveFontSize(1.7),
     	fontWeight:'400',
     	alignSelf:'flex-start'
     },
@@ -60,11 +103,57 @@ const styles = {
     heads:{
         color:'white',
         fontWeight:'600',
+       fontSize:responsiveFontSize(1.7),
     },
     tails:{
        color:'white',
        fontWeight:'200',
-    }
+       fontSize:responsiveFontSize(1.7),
+    },
+    submenutext:{
+        fontSize:responsiveFontSize(1.3),
+        color:'white',
+        fontWeight:'500'
+    },
+    amountView:{
+        marginTop:responsiveHeight(15),
+        width:'70%',
+        alignSelf:'center'
+    },
+    greenView:{
+        borderRadius:3,
+        marginTop:responsiveHeight(5),
+        width:'90%',
+        alignSelf:'center',
+        backgroundColor:'rgb(0,154,105)'
+    },
+    greenunderView:{
+        flexDirection:'row',
+        alignSelf:'center'
+    },
+    makeView:{
+        marginTop:responsiveHeight(10),
+        flex:3,
+        width:'70%',
+        alignSelf:'center'
+    },
+    blueView:{
+        borderRadius:3,
+        marginTop:responsiveWidth(10),
+        width:'90%',
+        alignSelf:'center',
+        backgroundColor:'rgb(0,255,254)',
+        paddingVertical:responsiveHeight(2),
+        alignItems:'center'
+    },
+    enterView:{
+        marginTop: responsiveHeight(10),
+        width:'70%',
+        alignSelf:'center'
+    },
+    scanView:{
+        height: responsiveWidth(30),
+    },
 }
 
 export default styles

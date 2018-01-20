@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Platform,Text,Alert,ActivityIndicator,
-    Button,TouchableHighlight,TouchableOpacity,View, StyleSheet,
+    Button,TouchableHighlight,TouchableOpacity,View, Dimensions,StyleSheet,
     ScrollView,Image,ListView,TextInput,Switch} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
@@ -25,15 +25,16 @@ class HomeScreen extends React.Component {
 
         return ({
             gesturesEnabled: false,
-            headerLeft: <TouchableHighlight onPress={params ? params.onOpenSideMenu : () => {}}>
-                            <Image style={{height:30,width:30}} source={menu} />
-                        </TouchableHighlight>,
-            headerRight: <TouchableOpacity onPress={() => {}}>
+            headerLeft: <TouchableOpacity onPress={params ? params.onOpenSideMenu : () => {}}>
+                            <Image style={styles.headerImage} source={menu} />
+                        </TouchableOpacity>,
+            headerTitle: <Text style={styles.headerTitle}>Setting</Text>,           
+            headerTitleStyle: {
+                alignItems: 'center'
+            },
+            headerRight: <TouchableOpacity onPress={params ? params.gologin : () => {}}>
                             <Text style={styles.logoutText}>Log Out</Text>
                         </TouchableOpacity>, 
-            headerTitleStyle: {
-            alignItems: 'center'
-            },
             headerStyle: {
                 backgroundColor: 'white',
                 height: 70,
@@ -58,25 +59,10 @@ class HomeScreen extends React.Component {
 
     componentWillMount() {
         this.props.navigation.setParams({
-            onOpenSideMenu: () => this.props.navigation.goBack()
+            onOpenSideMenu: () => this.props.navigation.goBack(),
+            gologin: () => this.props.navigation.navigate('LoginScreen')
 
         });        
-    }
-
-    toggleSwitch1(){
-       
-    }
-    toggleSwitch2(){
-        
-    }
-    toggleSwitch3(){
-        
-    }
-    toggleSwitch4(){
-        
-    }
-    toggleSwitch15(){
-       
     }
 
     render() {
@@ -90,36 +76,30 @@ class HomeScreen extends React.Component {
                             position:'absolute'
                         }}
                     />
-                    <View style={{flex:1,paddingVertical: 70,justifyContent:'space-between'}}>        
-                        <Text style={{
-                            fontSize:28,
-                            fontWeight:'700',
-                            color:'white',
-                            backgroundColor:'transparent',
-                            textAlign:'center'}}>Setting</Text>   
+                    <View style={styles.commonView}>        
                                                                    
-                            <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
-                                <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>PIN</Text>
+                            <View style={styles.rowView}>
+                                <Text style={styles.itemText}>PIN</Text>
                                 <Switch onValueChange={ (value) => this.setState({ switch1Value: !this.state.switch1Value })} 
                                         value = {this.state.switch1Value}/> 
                             </View>  
-                            <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
-                                <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Enroll Fingerprint</Text>
+                            <View style={styles.rowView}>
+                                <Text style={styles.itemText}>Enroll Fingerprint</Text>
                                 <Switch onValueChange={ (value) => this.setState({ switch2Value: !this.state.switch2Value })} 
                                         value = {this.state.switch2Value}/> 
                             </View>  
-                            <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
-                                <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Enroll Wipay card</Text>
+                            <View style={styles.rowView}>
+                                <Text style={styles.itemText}>Enroll Wipay card</Text>
                                 <Switch onValueChange={ (value) => this.setState({ switch3Value: !this.state.switch3Value })} 
                                         value = {this.state.switch3Value}/> 
                             </View>  
-                            <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
-                                <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Enroll facial recognition</Text>
+                            <View style={styles.rowView}>
+                                <Text style={styles.itemText}>Enroll facial recognition</Text>
                                 <Switch onValueChange={ (value) => this.setState({ switch4Value: !this.state.switch4Value })} 
                                         value = {this.state.switch4Value}/> 
                             </View>                    
-                            <View style={{flexDirection:'row',paddingHorizontal: 40,justifyContent:'space-between'}}>
-                                <Text style={{backgroundColor:'transparent',color:'white',fontSize:20}}>Saved Documents</Text>
+                            <View style={styles.rowView}>
+                                <Text style={styles.itemText}>Saved Documents</Text>
                                 <Switch onValueChange={ (value) => this.setState({ switch5Value: !this.state.switch5Value })} 
                                         value = {this.state.switch5Value}/> 
                             </View>  

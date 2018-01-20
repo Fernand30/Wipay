@@ -21,16 +21,16 @@ class DepositScreen extends React.Component {
 
         return ({
             gesturesEnabled: false,
-            headerTitle: <Text style={{color:'rgb(0,163,240)',fontSize:35,alignSelf:'center',fontWeight:'300'}}>Invoice</Text>,
-            headerLeft: <TouchableHighlight onPress={params ? params.onOpenSideMenu : () => {}}>
-                            <Image style={{height:30,width:30}} source={menu} />
-                        </TouchableHighlight>,
+            headerLeft: <TouchableOpacity onPress={params ? params.onOpenSideMenu : () => {}}>
+                            <Image style={styles.headerImage} source={menu} />
+                        </TouchableOpacity>,
+            headerTitle: <Text style={styles.headerTitle}>Invoice</Text>,           
             headerTitleStyle: {
-            alignCenter: 'center'
+                alignItems: 'center'
             },
-            headerRight: <TouchableHighlight onPress={params ? params.onOpenSetting : () => {}}>
-                            <Image style={{height:30,width:30}} source={setting} />
-                        </TouchableHighlight>,
+            headerRight: <TouchableOpacity onPress={params ? params.onOpenSetting : () => {}}>
+                            <Image style={styles.headerImage} source={setting} />
+                        </TouchableOpacity>,
             headerStyle: {
                 backgroundColor: 'white',
                 height: 70,
@@ -100,21 +100,9 @@ class DepositScreen extends React.Component {
                         position:'absolute'
                     }}
                 />
-                <KeyboardAwareScrollView
-                    contentContainerStyle={{flex:1}}
-                     resetScrollToCoords={{ x: 0, y: 0 }}
-                    scrollEnabled={false}>
                 <View style={styles.container}>
-                    <View style={{
-                                    flex:2.5,
-                                    justifyContent:'space-between',
-                                    flexDirection:'row',
-                                    paddingRight:10,
-                                    paddingLeft:10
-                                }}>
-                        <View/>
-                        <Text style={styles.wipay}>Create Invoice</Text>
-                        <View/>
+                    <View style={styles.topView}>
+                       <Text style={styles.wipay}>Create Invoice</Text>
                     </View>
                     <View style={{flex:5,backgroundColor:'white'}}>
                         <View style={{
@@ -142,7 +130,6 @@ class DepositScreen extends React.Component {
                         </View>
                     </View>                        
                 </View>
-                </KeyboardAwareScrollView>
                 <View style={{}}>
                     <FooterScreen navigation={this.props.navigation} />
                 </View>

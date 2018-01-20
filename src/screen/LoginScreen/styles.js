@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const styles = {
     container: {
@@ -7,13 +8,13 @@ const styles = {
     },
     wipay:{
     	color:'white',
-    	fontSize:65,
+    	fontSize:responsiveFontSize(8),
     	fontWeight:'600',
     	alignSelf:'center',
     },
     login:{
     	color:'white',
-    	fontSize:18,
+    	fontSize:responsiveFontSize(2.2),
     	fontWeight:'600',
     	alignSelf:'center'
     },
@@ -22,22 +23,33 @@ const styles = {
     	alignSelf:'center',
     	borderBottomWidth:2,
     	borderColor:'white',
-    	fontSize:22,
+    	fontSize:responsiveFontSize(3),
     	paddingBottom:8,
     	color:'white'
     },
     loginButton:{
     	width:'80%',
-    	height:50,
+    	height:responsiveHeight(7),
     	backgroundColor:'rgb(0,126,219)',
     	alignSelf:'center',
-    	borderRadius:15
+    	borderRadius:responsiveHeight(2),
+        marginTop: responsiveHeight(2)
     },
     forgot:{
     	color:'white',
-    	fontSize:16,
+    	fontSize:responsiveFontSize(2),
     	fontWeight:'600',
-    	alignSelf:'center'
+    	alignSelf:'center',
+        marginTop: responsiveHeight(1)
+    },
+    loginButtonText:{
+        color:'white',
+        fontSize:responsiveFontSize(3),
+        fontWeight:'600'
+    },
+    bottomView:{
+        flex:1,
+        paddingBottom:responsiveHeight(1),
     }
 }
 

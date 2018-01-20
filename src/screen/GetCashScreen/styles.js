@@ -1,15 +1,35 @@
 import { Platform } from 'react-native';
-
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 const styles = {
     container: {
         flex: 8,
         backgroundColor:'transparent',
     },
     wipay:{
-    	color:'white',
-    	fontSize:45,
-    	fontWeight:'300',
-    	alignSelf:'center',
+        color:'white',
+        fontSize:responsiveFontSize(5),
+        fontWeight:'300',
+        alignSelf:'center',
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
+      alignSelf:'center',
+      fontWeight:'300'
+    },
+    topView:{
+        flex:2.5,
+        justifyContent:'center',
+        alignItems: 'center'
+    },
+    submenutext:{
+        fontSize:responsiveFontSize(1.5),
+        color:'white',
+        fontWeight:'500'
     },
     login:{
     	color:'white',
@@ -17,24 +37,44 @@ const styles = {
     	fontWeight:'400',
     	alignSelf:'center'
     },
+    otherView:{
+        flex:1,
+        paddingVertical:20
+    },
     username:{
     	width:'100%',
     	alignSelf:'center',
     	borderBottomWidth:2,
     	borderColor:'#ddd',
-    	fontSize:22,
-    	paddingBottom:8,
-    	color:'black'
+    	fontSize:responsiveFontSize(2),
+    	paddingBottom:responsiveHeight(1),
+    	color:'black',
+        height: responsiveHeight(5)
+    },
+    submitButton:{
+        marginTop:responsiveHeight(0),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitText:{
+        color:'rgb(0,168,220)',
+        fontSize:responsiveFontSize(3),
+        fontWeight:'300'
     },
     balance:{
-        flex:2,
         borderColor:'#ddd',
         width:'80%',
         alignSelf:'center',
         alignItems:'center',
+        justifyContent:'center',
         borderWidth:1,
-        marginVertical:20,
-        paddingTop:10
+        marginVertical:responsiveHeight(3),
+        paddingVertical:responsiveHeight(1.5),
     },
     loginButton:{
     	width:'40%',
@@ -47,7 +87,7 @@ const styles = {
     },
     forgot:{
     	color:'grey',
-    	fontSize:14,
+    	fontSize:responsiveFontSize(1.5),
     	fontWeight:'400',
     	alignSelf:'flex-start'
     },
@@ -55,13 +95,13 @@ const styles = {
         flexDirection:'row',
         justifyContent:'center',
         alignItems:'center',
-        marginTop:5,
+        marginTop:responsiveHeight(0.7),
     },
     blackView:{
-        width:20,
-        height:20,
+        width:responsiveHeight(3),
+        height:responsiveHeight(3),
         backgroundColor:'black',
-        marginRight: 5,
+        marginRight: responsiveHeight(0.7),
     },
     username1:{
         width:'100%',
@@ -70,11 +110,12 @@ const styles = {
         borderColor:'#ddd',
         fontSize:18,
         paddingBottom:3,
-        color:'black'
+        color:'black',
+        height: 30
     },
     balanceText:{
         color:'grey',
-        fontSize:14,
+        fontSize:responsiveFontSize(1.5),
         fontWeight:'400',
     },
     line:{

@@ -1,15 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableOpacity,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import SideMenu from 'react-native-side-menu';
 import SideMenuScreen from '../SideMenuScreen';
-import Icon from 'react-native-vector-icons/Ionicons';
+//import Icon from 'react-native-vector-icons/Ionicons';
 import FooterScreen from '../Footer'
 import loginback from '../../images/body-bg.png'
 import menu from '../../images/menu.png'
+import setting from '../../images/setting.png'
 
 class DepositScreen extends React.Component {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -17,20 +18,22 @@ class DepositScreen extends React.Component {
 
         return ({
             gesturesEnabled: false,
-            headerTitle: <Text style={{color:'rgb(0,163,240)',fontSize:35,alignSelf:'center',fontWeight:'300'}}>WiCoin</Text>,
-            headerLeft: <TouchableHighlight onPress={params ? params.onOpenSideMenu : () => {}}>
-                            <Image style={{height:30,width:30}} source={menu} />
-                        </TouchableHighlight>,
+            headerLeft: <TouchableOpacity onPress={params ? params.onOpenSideMenu : () => {}}>
+                            <Image style={styles.headerImage} source={menu} />
+                        </TouchableOpacity>,
+            headerTitle: <Text style={styles.headerTitle}>Wicoin</Text>,           
             headerTitleStyle: {
-            alignCenter: 'center'
+                alignItems: 'center'
             },
+            headerRight: <TouchableOpacity onPress={params ? params.onOpenSetting : () => {}}>
+                            <Image style={styles.headerImage} source={setting} />
+                        </TouchableOpacity>,
             headerStyle: {
                 backgroundColor: 'white',
                 height: 70,
                 paddingLeft: 10,
                 paddingRight: 10,
-                alignSelf:'auto',
-                
+                alignSelf:'auto'
             }
         });
     };
@@ -107,14 +110,7 @@ class DepositScreen extends React.Component {
                 />
                 
                 <View style={styles.container}>
-                    <View style={{
-                                    flex:3,
-                                    justifyContent:'space-between',
-                                    flexDirection:'row',
-                                    paddingRight:10,
-                                    paddingLeft:10
-                                }}>
-                        <View/>
+                     <View style={styles.topView}>
                         {
                             this.state.activeWindow == "0"
                             ?
@@ -136,21 +132,19 @@ class DepositScreen extends React.Component {
                             :
                             null
                         }
-                        
-                        <View/>
                     </View>
                     <View style={{flex:5,backgroundColor:'white'}}>
                         <View style={{
                             flexDirection:'row',
                         }}>
                             <RkButton style={this.state.activeWindow == "0" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "0" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>Buy</Text>
+                                <Text style={styles.submenutext}>Buy</Text>
                             </RkButton>
                             <RkButton style={this.state.activeWindow == "1" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "1" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>Sell</Text>
+                                <Text style={styles.submenutext}>Sell</Text>
                             </RkButton>
                             <RkButton style={this.state.activeWindow == "2" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "2" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>Transfer</Text>
+                                <Text style={styles.submenutext}>Transfer</Text>
                             </RkButton>
                             
                         </View>
@@ -181,12 +175,9 @@ class DepositScreen extends React.Component {
                                     value={this.state.myNumber}/>
                                 
                                 <TextInput underlineColorAndroid='transparent' editable={false} placeholder="TDD Amount" style={styles.username}/>
-                                    
-                                <View style={{marginTop:15}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Buy</Text>
-                                    </RkButton>
-                                </View>
+                                <RkButton style={styles.submitButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Buy</Text>
+                                </RkButton>
                             </View>
                             :
                             null
@@ -214,12 +205,9 @@ class DepositScreen extends React.Component {
                                     value={this.state.myNumber}/>
                                 
                                 <TextInput underlineColorAndroid='transparent' editable={false} placeholder="TDD Amount" style={styles.username}/>
-                                    
-                                <View style={{marginTop:15}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Sell</Text>
-                                    </RkButton>
-                                </View>
+                                <RkButton style={styles.submitButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Sell</Text>
+                                </RkButton>
                             </View>
                             :
                             null
@@ -247,12 +235,9 @@ class DepositScreen extends React.Component {
                                     value={this.state.myNumber}/>
                                 
                                 <TextInput underlineColorAndroid='transparent' editable={false} placeholder="TDD Amount" style={styles.username}/>
-                                    
-                                <View style={{marginTop:15}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Transfer</Text>
-                                    </RkButton>
-                                </View>
+                                <RkButton style={styles.submitButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Transfer</Text>
+                                </RkButton>
                             </View>
                             :
                             null

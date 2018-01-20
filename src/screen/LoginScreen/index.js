@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -52,13 +52,13 @@ class LoginScreen extends React.Component {
                     </View>
                     <View style={{flex:2}}>
                         <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
-                            <Text style={{color:'white',fontSize:25,fontWeight:'600'}}>Login</Text>
+                            <Text style={styles.loginButtonText}>Login</Text>
                         </RkButton>
                     </View>
                     <View style={{flex:1}}>
                         <Text style={styles.forgot}>Forgot your password ?</Text>
                     </View>
-                    <View style={{alignItems:'center',}}>
+                    <View style={{alignItems:'center',marginTop:5,}}>
                       <RkButton style={{backgroundColor:'transparent'}} onPress={() => this.props.navigation.navigate('WipayScreen')}>
                         <Image
                             source={fingerprint}
@@ -70,7 +70,7 @@ class LoginScreen extends React.Component {
                       </RkButton>    
                     </View>    
                     <View style={{flex:4}}></View>
-                    <View style={{flex:1}}>
+                    <View style={styles.bottomView}>
                         <Text style={styles.forgot}>Register Now</Text>
                     </View>
                 </View>

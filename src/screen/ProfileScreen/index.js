@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,Dimensions,TouchableHighlight,TouchableOpacity,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Dimensions,utton,TouchableHighlight,TouchableOpacity,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import SideMenu from 'react-native-side-menu';
 import SideMenuScreen from '../SideMenuScreen';
-import Icon from 'react-native-vector-icons/Ionicons';
+//import Icon from 'react-native-vector-icons/Ionicons';
 import FooterScreen from '../Footer'
 import loginback from '../../images/body-bg.png'
 import menu from '../../images/menu.png'
@@ -18,16 +18,16 @@ class DepositScreen extends React.Component {
 
         return ({
             gesturesEnabled: false,
-            headerTitle: <Text style={{color:'rgb(0,163,240)',fontSize:35,alignSelf:'center',fontWeight:'300'}}>Profile Setting</Text>,
-            headerLeft: <TouchableHighlight onPress={params ? params.onOpenSideMenu : () => {}}>
-                            <Image style={{height:30,width:30}} source={menu} />
-                        </TouchableHighlight>,
+            headerLeft: <TouchableOpacity onPress={params ? params.onOpenSideMenu : () => {}}>
+                            <Image style={styles.headerImage} source={menu} />
+                        </TouchableOpacity>,
+            headerTitle: <Text style={styles.headerTitle}>Profile Settings</Text>,           
             headerTitleStyle: {
-            alignCenter: 'center'
+                alignItems: 'center'
             },
-            headerRight: <TouchableHighlight onPress={params ? params.onOpenSetting : () => {}}>
-                            <Image style={{height:30,width:30}} source={setting} />
-                        </TouchableHighlight>,
+            headerRight: <TouchableOpacity onPress={params ? params.onOpenSetting : () => {}}>
+                            <Image style={styles.headerImage} source={setting} />
+                        </TouchableOpacity>,
             headerStyle: {
                 backgroundColor: 'white',
                 height: 70,
@@ -93,14 +93,7 @@ class DepositScreen extends React.Component {
                 />
                 
                 <View style={styles.container}>
-                    <View style={{
-                                    flex:3,
-                                    justifyContent:'space-between',
-                                    flexDirection:'row',
-                                    paddingRight:10,
-                                    paddingLeft:10
-                                }}>
-                        <View/>
+                     <View style={styles.topView}>
                         {
                             this.state.activeWindow == "0"
                             ?
@@ -129,23 +122,22 @@ class DepositScreen extends React.Component {
                             :
                             null
                         }
-                        <View/>
                     </View>
                     <View style={{flex:5,backgroundColor:'white'}}>
                         <View style={{
                             flexDirection:'row',
                         }}>
                             <RkButton style={this.state.activeWindow == "0" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "0" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>KYC</Text>
+                                <Text style={styles.submenutext}>KYC</Text>
                             </RkButton>
                             <RkButton style={this.state.activeWindow == "1" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "1" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>Bank</Text>
+                                <Text style={styles.submenutext}>Bank</Text>
                             </RkButton>
                             <RkButton style={this.state.activeWindow == "2" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "2" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>User</Text>
+                                <Text style={styles.submenutext}>User</Text>
                             </RkButton>
                             <RkButton style={this.state.activeWindow == "3" ? styles.labelButtonA : styles.labelButton} onPress={() => this.setState({ activeWindow: "3" })}>
-                                <Text style={{fontSize:12,color:'white',fontWeight:'500'}}>Password</Text>
+                                <Text style={styles.submenutext}>Password</Text>
                             </RkButton>
                         </View>
                         <KeyboardAwareScrollView
@@ -162,7 +154,7 @@ class DepositScreen extends React.Component {
                                 </View>
                                 <View style={styles.greyView}/>
                                 <Text style={styles.label}>Level 2: Identify Verification</Text>
-                                <View style={{flex:1,width:'70%',alignSelf:'center'}}>
+                                <View style={styles.greenView}>
                                     <Text style={styles.forgot}>Photo ID or Passport</Text>
                                     <View style={{flexDirection:'row',alignSelf:'center'}}>
                                         <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username}></TextInput>
@@ -171,7 +163,7 @@ class DepositScreen extends React.Component {
                                         </TouchableOpacity>
                                     </View> 
                                 </View>
-                                <View style={{flex:1,width:'70%',alignSelf:'center'}}>
+                                <View style={{width:'70%',alignSelf:'center'}}>
                                     <Text style={styles.forgot}>Proof of Address</Text>
                                     <View style={{flexDirection:'row',alignSelf:'center'}}>
                                         <TextInput underlineColorAndroid='transparent' style={styles.username}></TextInput>
@@ -180,11 +172,9 @@ class DepositScreen extends React.Component {
                                         </TouchableOpacity>
                                     </View> 
                                 </View>
-                                <View style={{flex:0.7}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Verify</Text>
-                                    </RkButton>
-                                </View>
+                                <RkButton style={styles.submitButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Submit</Text>
+                                </RkButton>
                             </View>
                             :
                             null
@@ -192,25 +182,19 @@ class DepositScreen extends React.Component {
                         {
                             this.state.activeWindow == "1"
                             ?
-                           <View style={{flex:1,paddingTop:20}}>
-                                
+                           <View style={styles.otherView}>
                                 <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Bank Name</Text>
                                     <TextInput underlineColorAndroid='transparent' style={styles.username1}></TextInput>
-                                </View>
-                                <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Bank Account Number</Text>
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username1}></TextInput>
-                                </View>
-                                <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Name on Bank Account</Text>
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username1}></TextInput>
                                 </View>
-                                <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
-                                    </RkButton>
-                                </View>
+                                <RkButton style={styles.submitButton1} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Submit</Text>
+                                </RkButton>
+                                
                             </View>
                             :
                             null
@@ -218,25 +202,19 @@ class DepositScreen extends React.Component {
                         {
                             this.state.activeWindow == "2"
                             ?
-                            <View style={{flex:1,paddingTop:20}}>
+                            <View style={styles.otherView}>
                                 
                                 <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Phone#</Text>
                                     <TextInput underlineColorAndroid='transparent' keyboardType = 'numeric' returnKeyType="done" style={styles.username1}></TextInput>
-                                </View>
-                                <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Password</Text>
                                     <TextInput underlineColorAndroid='transparent' secureTextEntry={true} style={styles.username1}></TextInput>
-                                </View>
-                                <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Bank</Text>
                                     <TextInput underlineColorAndroid='transparent' style={styles.username1}></TextInput>
                                 </View>
-                                <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
-                                    </RkButton>
-                                </View>
+                                 <RkButton style={styles.submitButton1} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Submit</Text>
+                                </RkButton>
                             </View>
                             :
                             null
@@ -244,25 +222,19 @@ class DepositScreen extends React.Component {
                         {
                             this.state.activeWindow == "3"
                             ?
-                            <View style={{flex:1,paddingTop:20}}>
+                            <View style={styles.otherView}>
                                 
                                 <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Old Password</Text>
                                     <TextInput underlineColorAndroid='transparent' style={styles.username1}></TextInput>
-                                </View>
-                                <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>New Password</Text>
                                     <TextInput underlineColorAndroid='transparent' secureTextEntry={true} style={styles.username1}></TextInput>
-                                </View>
-                                <View style={{flex:2,width:'70%',alignSelf:'center'}}>
                                     <Text style={[styles.forgot,{color:'rgb(83,83,83)'}]}>Confirm New password</Text>
                                     <TextInput underlineColorAndroid='transparent' secureTextEntry={true} style={styles.username1}></TextInput>
                                 </View>
-                                <View style={{flex:2}}>
-                                    <RkButton style={styles.loginButton} onPress={() => this.props.navigation.navigate('WipayScreen')}>
-                                        <Text style={{color:'rgb(0,168,220)',fontSize:25,fontWeight:'300'}}>Submit</Text>
-                                    </RkButton>
-                                </View>
+                                <RkButton style={styles.submitButton1} onPress={() => this.props.navigation.navigate('WipayScreen')}>
+                                    <Text style={styles.submitText}>Submit</Text>
+                                </RkButton>
                             </View>
                             :
                             null

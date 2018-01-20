@@ -3,30 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_24d632591b118a059d776bda99db4d8f8940c5b7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\Wipay\react-native-vector-icons\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\Wipay-react-native-vector-icons-unspecified_d86f4ba354e519d46e5ebaf43468d666f4a0a4ec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_3e1db2cb267862c0c9c3dd16293833febc6c7250.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_3b61a830c5c7a1f111a3919152104be3060d04ce.jar" />
     </item>
     <item
         is-multidex="false"
@@ -35,16 +17,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_a09cf815e25db104bb5dcdb6d9ef2516fdd6643f.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_a09cf815e25db104bb5dcdb6d9ef2516fdd6643f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.51.0\jars\classes.jar"
+        jar="C:\Users\OneOne\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.0.2\8b68a849722b44f584e2d68c451c5e3844c10380\support-annotations-26.0.2.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="99941aaaf86dc5e525cd9208c2f7c9a624f4f004">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.51.0_df63331ba8c111f5e24d641615004c01ce089d34.jar" />
+        sha1="8b68a849722b44f584e2d68c451c5e3844c10380">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.2_6f730ba82c238beb9c57f3801494ec97b7cf0688.jar" />
     </item>
     <item
         is-multidex="false"
@@ -53,7 +35,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="55615fa2582424e38705487d1d3969af8554f637">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\xmpcore-5.1.2_7f9f7127d1fde0c23a804857487e4531bda1d7b6.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\xmpcore-5.1.2_7f9f7127d1fde0c23a804857487e4531bda1d7b6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -62,34 +44,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_bc8d7000cd7279adc5b6c6d06a64f3b407729c8f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.51.0\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_271c2db15d4efdee5e4ca1df34563d5c19134ecf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_b081cc008e671a4a15fba103997193fc793a0ce2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_8ddda33bde1f11a4dcf6ecba2348181ee2b71b62.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_bc8d7000cd7279adc5b6c6d06a64f3b407729c8f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -98,7 +53,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="53fdf22be10c9d426ec63431c7342895bc642261">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\metadata-extractor-2.9.1_0977ea70a99710609540be034b37e81b507b52cd.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\metadata-extractor-2.9.1_0977ea70a99710609540be034b37e81b507b52cd.jar" />
     </item>
     <item
         is-multidex="false"
@@ -107,7 +62,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_2412f7028d184614fdfc6b340e05386796a08b98.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_2412f7028d184614fdfc6b340e05386796a08b98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_f70f4f9c37efcd462da72b442040e3480cbbea15.jar" />
     </item>
     <item
         is-multidex="false"
@@ -116,43 +80,79 @@
         optimize="true"
         revision="23.0.1"
         sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_981680913f38fbcd035e98ac4bc52a2e074cadc9.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_981680913f38fbcd035e98ac4bc52a2e074cadc9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_8d707ab64b55f1d9ea0884fa2a41e95e11e0135b.jar" />
+        sha1="233d88c6f961d2a84758dfe27b7af61318190c7b">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-11.8.0_aec9308aa76c69079fe63267721b880640dd9053.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\Wipay\react-native-android-keyboard-adjust\unspecified\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\libs\infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="fa05a6ad2587dbe8de529e0b20bdd5683ec467a7">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\Wipay-react-native-android-keyboard-adjust-unspecified_3ff8eed1404ae88f3b7c4b77c03421ad013cbde3.jar" />
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_5943af11cfa9842515f8179efbb600f1c3d52baa.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_c617a56d6058fb97e565ac95f4bd22570292dae2.jar" />
+        sha1="d2af2ef4d987d753f2e8ee2d1480ab964d5c7273">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-11.8.0_474f4f224f52461a7548a3e23cc4cb02db95cd9d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_177ddfca63bc36c6f71ebb4feb95b96c78fccbf7.jar" />
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_dc8e547a86d3ebe5c104ab8579cdfa25db91730d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5ad3911825107d8dd4b017fdecebfd23c08048dd">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-11.8.0_0729791e588e5dbb9a415743960cb93644bbed28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_e0703d6b2cb53aa1d21b7d6213be69f8130e9989.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_675566c8344f65ee8bd9f95164514c5ec171ce70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ecd0a96f6bda796eeffafb066a93c84163b72234">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-11.8.0_889ea76af92321cd6232c2369b1233a93cd51036.jar" />
     </item>
     <item
         is-multidex="false"
@@ -161,7 +161,34 @@
         optimize="true"
         revision="23.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_3aa90f007e18840e85febc41136dfa9d5f04825c.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_3aa90f007e18840e85febc41136dfa9d5f04825c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.52.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.52.0_1a0971a1d6465de22e9af54d88bef9521ee95642.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="22c673e65215e0764add61e3102946de895439e4">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-26.0.1_118d5f9602bb176eb96d98a708ee77431c4ba097.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_65d37b0af8b315106726cb7e8a8357661b70bf01.jar" />
     </item>
     <item
         is-multidex="false"
@@ -170,34 +197,70 @@
         optimize="true"
         revision="23.0.1"
         sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_d22095d19d7c82497d29c0dd130c6f0019e129be.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_d22095d19d7c82497d29c0dd130c6f0019e129be.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\Wipay\react-native-camera\unspecified\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_d2e49236acfffad78440772474cd61c6c87b8bcd.jar" />
+        sha1="f6106c4019ef738627c7cc65eba85d030fd86772">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\Wipay-react-native-camera-unspecified_d3d7a561476b4123a8625d1574a0e0c868653731.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\OneOne\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_6f1d699c5244028a8bc5f0d6715a7d9ac9d03c5e.jar" />
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_3504e022980d248d8c88d1956ceaaab867d46666.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision-common\11.8.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_80d386c6dbbf8fa9c6a9957f8628218803866759.jar" />
+        sha1="cf42968b00f665dae552206e33705877b949b333">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-common-11.8.0_c98bc90ce268d7aa9c86c59814e882431691f6de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\Wipay\react-native-android-keyboard-adjust\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa05a6ad2587dbe8de529e0b20bdd5683ec467a7">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\Wipay-react-native-android-keyboard-adjust-unspecified_670bdd883a8c482c91b569659c22b9c029be8fc4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_5b7567752782ebe0e947f2c78882e2154017c19d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a4590fa7eadce322ca893129fdc999074e1aa5bf">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-26.0.1_a8a0c0e9c491e66399e9c207ea47c35f40f55054.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\Wipay\react-native-vector-icons\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\Wipay-react-native-vector-icons-unspecified_273be4bfab6ba5af0065257be5c5ce736a81db25.jar" />
     </item>
     <item
         is-multidex="false"
@@ -206,25 +269,34 @@
         optimize="true"
         revision="23.0.1"
         sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\core-3.2.1_b60e4025994139c52e9f2ab009ea894aaff8bfb1.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\core-3.2.1_b60e4025994139c52e9f2ab009ea894aaff8bfb1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_202d23d6380be6e165d781c0212c7d6bc2da6184.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-26.0.1_100e42912abc942dc3cc9b65581ab1bf81bce426.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\Wipay\react-native-camera\unspecified\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="21e6852771851d36133b5d694a045ec35f141569">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\Wipay-react-native-camera-unspecified_dccd0088d245d669b21bb27c6bde2eb60f413b45.jar" />
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_eeb0b9bdebcc0fabb1e7563067888958b53f107a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.github.react-native-community\cameraview\df60b07573\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6011f35f886d86ba2e3c5f42309032ba0df77151">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.github.react-native-community-cameraview-df60b07573_cdb8ba6cc5fb8af6a1e703331424b6fd44bf020a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -233,16 +305,43 @@
         optimize="true"
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_babe6855094df06f596094c9dd3469b2f9a161c3.jar" />
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_babe6855094df06f596094c9dd3469b2f9a161c3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="E:\zzz\Archive\wew\wew\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="E:\zzz\Archive\wew\wew\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_ce9b685eb1d99e160ac8a7a5642e93eed8e11d17.jar" />
+        sha1="d095503f29a8dedc55b9326ed97a5902a1527ab9">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-26.0.1_b7f95c477274f31fba89417ecffbad1007e63443.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\exifinterface\26.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b16a8a4f42d24615e2c8cb2af5205d5ed7f4440c">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-exifinterface-26.0.2_8bbbd94b5ebc9026f166fad3f7cca162803c1900.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="71af915b7f4f7ec0b5f768b365145bb6a5cb9a66">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-26.0.1_b5f6f0868329eb8703131a593f75263270d319ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\zzz\Wipay\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dff4d8f88fe2c0e57306e6981fd9b90caeead7e3">
+        <dex dex="E:\zzz\Wipay\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-26.0.1_be9d7158d01a271c35319694f13f7334ba324b2b.jar" />
     </item>
 
 </items>

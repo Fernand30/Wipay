@@ -1,15 +1,30 @@
 import { Platform } from 'react-native';
-
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 const styles = {
     container: {
-        flex: 8,
+        flex: 1,
         backgroundColor:'transparent',
     },
     wipay:{
-    	color:'white',
-    	fontSize:45,
-    	fontWeight:'300',
-    	alignSelf:'center',
+        color:'white',
+        fontSize:responsiveFontSize(5),
+        fontWeight:'300',
+        alignSelf:'center',
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
+      alignSelf:'center',
+      fontWeight:'300'
+    },
+    topView:{
+        flex:2.5,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     login:{
     	color:'white',
@@ -18,7 +33,17 @@ const styles = {
     	alignSelf:'center'
     },
     label:{
-        textAlign:'center'
+        textAlign:'center',
+        fontSize: responsiveFontSize(1.5),
+    },
+    otherView:{
+        flex:1,
+        paddingVertical:responsiveHeight(3),
+    },
+    greenView:{
+        marginTop: responsiveHeight(0.4),
+        width:'70%',
+        alignSelf:'center'
     },
     buttonView:{
         width:'30%',
@@ -28,29 +53,36 @@ const styles = {
         marginLeft:5
     },
     uploadText:{
-        fontSize:12,
+        fontSize:responsiveFontSize(1.2),
         color:'grey'
+    },
+    submenutext:{
+        fontSize:responsiveFontSize(1.5),
+        color:'white',
+        fontWeight:'500'
     },
     username:{
     	width:'70%',
     	alignSelf:'center',
     	borderBottomWidth:2,
     	borderColor:'#ddd',
-    	fontSize:18,
+    	fontSize:responsiveFontSize(1.5),
     	paddingBottom:3,
-    	color:'black'
+    	color:'black',
+        height:responsiveHeight(5),
     },
     username1:{
         width:'100%',
         alignSelf:'center',
         borderBottomWidth:2,
         borderColor:'#ddd',
-        fontSize:18,
+        fontSize:responsiveFontSize(1.5),
         paddingBottom:3,
-        color:'black'
+        color:'black',
+        height:responsiveHeight(5),
     },
     verifiaction:{
-        paddingVertical:10,
+        paddingVertical:responsiveHeight(1.5),
         width: '80%',
         backgroundColor: '#cceac3',
         alignItems:'center',
@@ -59,6 +91,7 @@ const styles = {
     },
     verfiedText:{
         color: '#146810',
+        fontSize: responsiveFontSize(2),
     },
     loginButton:{
     	width:'40%',
@@ -67,16 +100,42 @@ const styles = {
     	borderRadius:15,
         backgroundColor:'transparent',
         borderColor:'rgb(0,138,220)',
-        borderWidth:1
+        borderWidth:1,
+        marginTop:10
+    },
+    submitButton:{
+        marginTop:responsiveHeight(2),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitButton1:{
+        marginTop:responsiveHeight(4),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitText:{
+        color:'rgb(0,168,220)',
+        fontSize:responsiveFontSize(3),
+        fontWeight:'300'
     },
     greyView:{
-        height:10,
+        height:responsiveHeight(1.5),
         backgroundColor:'#d4d4d4',
-        marginVertical: 5,
+        marginVertical: responsiveHeight(0.7),
     },
     forgot:{
     	color:'grey',
-    	fontSize:14,
+    	fontSize:responsiveFontSize(1.5),
     	fontWeight:'400',
     	alignSelf:'flex-start'
     },

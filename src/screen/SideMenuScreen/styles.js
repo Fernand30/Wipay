@@ -1,22 +1,84 @@
 import { Platform } from 'react-native';
-
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 const styles = {
     container: {
         flex: 8,
         backgroundColor:'transparent',
     },
-    wipay:{
-      color:'white',
-      fontSize:55,
+     wipay:{
+      fontSize:responsiveFontSize(4),
       fontWeight:'600',
+      color:'white'
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    welcome:{
+      fontSize:responsiveFontSize(4),
+      fontWeight:'400',
+      color:'white'
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
       alignSelf:'center',
-        marginTop:20
+      fontWeight:'300'
     },
     login:{
       color:'white',
       fontSize:16,
       fontWeight:'400',
       alignSelf:'center'
+    },
+    oneText:{
+      fontSize:responsiveFontSize(2),
+      fontWeight:'400',
+      color:'white',
+      alignSelf:'center'
+    },
+    layout1:{
+      alignItems:'center',
+      justifyContent:'center',
+      flex:1,
+      borderColor:'white',
+      borderBottomWidth:1,
+      borderRightWidth:1
+    },
+    layout2:{
+      flexDirection:'column',
+      justifyContent:'center',
+      flex:1,
+      borderColor:'white',
+      borderBottomWidth:1,
+      borderRightWidth:1
+    },
+    layout3:{
+      flexDirection:'column',
+      justifyContent:'center',
+      flex:1,
+      borderColor:'white',
+      borderBottomWidth:1,
+      borderRightWidth:1
+    },
+    layout4:{
+      flexDirection:'column',
+      justifyContent:'center',
+      flex:1,
+      borderColor:'white',
+      borderBottomWidth:1,
+      borderRightWidth:1
+    },
+    eachImage:{
+      height:responsiveHeight(6),
+      alignSelf:'center',
+      width:responsiveHeight(6),
+    },
+    eachText:{
+      alignSelf:'center',
+      color:'white',
+      marginTop:responsiveHeight(1),
+      fontSize:responsiveFontSize(2),
     },
     username:{
       width:'80%',

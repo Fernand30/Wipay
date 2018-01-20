@@ -1,15 +1,35 @@
 import { Platform } from 'react-native';
-
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 const styles = {
     container: {
         flex: 8,
         backgroundColor:'transparent',
     },
     wipay:{
-    	color:'white',
-    	fontSize:45,
-    	fontWeight:'300',
-    	alignSelf:'center',
+        color:'white',
+        fontSize:responsiveFontSize(5),
+        fontWeight:'300',
+        alignSelf:'center',
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
+      alignSelf:'center',
+      fontWeight:'300'
+    },
+    submenutext:{
+        fontSize:responsiveFontSize(1.5),
+        color:'white',
+        fontWeight:'500'
+    },
+    topView:{
+        flex:2.5,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     login:{
     	color:'white',
@@ -17,18 +37,33 @@ const styles = {
     	fontWeight:'400',
     	alignSelf:'center'
     },
+    submitButton:{
+        marginTop:responsiveHeight(5),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitText:{
+        color:'rgb(0,168,220)',
+        fontSize:responsiveFontSize(3),
+        fontWeight:'300'
+    },
     username:{
     	width:'60%',
     	alignSelf:'center',
     	borderBottomWidth:2,
     	borderColor:'#ddd',
-    	fontSize:12,
+    	fontSize:responsiveFontSize(1.5),
     	paddingBottom:2,
     	color:'black',
         alignSelf:'center',
-        marginTop:5,
-        height:40,
-        marginTop: 10,
+        marginTop:responsiveHeight(0.7),
+        height:responsiveHeight(4),
+        marginTop: responsiveHeight(1.5),
         textAlign:'center',
     },
     rowView:{
@@ -37,7 +72,7 @@ const styles = {
         alignItems:'center',
         justifyContent:'space-between',
         alignSelf:'center',
-        marginTop:5,
+        marginTop:responsiveHeight(0.7),
     },
     loginButton:{
     	width:'40%',
@@ -50,18 +85,18 @@ const styles = {
     },
     forgot:{
     	color:'grey',
-    	fontSize:12,
+    	fontSize:responsiveFontSize(1.6),
     	fontWeight:'500',
     	alignSelf:'flex-start'
     },
     amountsell:{
         color:'grey',
-        fontSize:18,
+        fontSize:responsiveFontSize(2.2),
         fontWeight:'800',
         alignSelf:'flex-start',
         alignSelf:'center',
-        marginTop:10,
-        marginBottom:5,
+        marginTop:responsiveHeight(1.5),
+        marginBottom:responsiveHeight(0.7),
     },
     wicon:{
         color:'grey',

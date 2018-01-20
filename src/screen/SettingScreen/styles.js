@@ -1,55 +1,51 @@
 import { Platform } from 'react-native';
-
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 const styles = {
     container: {
         flex: 8,
         backgroundColor:'transparent',
     },
     wipay:{
-      color:'white',
-      fontSize:55,
-      fontWeight:'600',
+        color:'white',
+        fontSize:responsiveFontSize(5),
+        fontWeight:'300',
+        alignSelf:'center',
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
       alignSelf:'center',
-        marginTop:20
+      fontWeight:'300'
     },
-    login:{
-      color:'white',
-      fontSize:16,
-      fontWeight:'400',
-      alignSelf:'center'
-    },
-    username:{
-      width:'80%',
-      alignSelf:'center',
-      borderBottomWidth:2,
-      borderColor:'white',
-      fontSize:22,
-      paddingBottom:8,
-      color:'white'
-    },
-    loginButton:{
-      width:'48%',
-      height:35,
-      alignSelf:'center',
-      borderRadius:15
-    },
-    forgot:{
-      color:'white',
-      fontSize:18,
-      fontWeight:'400',
-      alignSelf:'center'
-    },
-    line:{
-        height:2,
-        backgroundColor:'rgb(225,225,225)',
-        width:'100%',
-        marginBottom:10
+    topView:{
+        flex:2.5,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     logoutText:{
-      fontSize:20,
+      fontSize:responsiveFontSize(2.5),
       fontWeight:'700',
       color:'#14a7fd'
-    }
+    },
+    rowView:{
+      flexDirection:'row',
+      paddingHorizontal: responsiveHeight(7),
+      justifyContent:'space-between'
+    },
+    itemText:{
+      backgroundColor:'transparent',
+      color:'white',
+      fontSize:responsiveFontSize(2.2)
+    },
+    commonView:{
+      flex:1,
+      paddingVertical: responsiveHeight(20),
+      justifyContent:'space-between'
+    },
 
 }
 

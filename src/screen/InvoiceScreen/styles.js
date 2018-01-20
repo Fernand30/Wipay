@@ -1,15 +1,30 @@
 import { Platform } from 'react-native';
-
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 const styles = {
     container: {
-        flex: 8,
+        flex: 1,
         backgroundColor:'transparent',
     },
     wipay:{
-    	color:'white',
-    	fontSize:45,
-    	fontWeight:'300',
-    	alignSelf:'center',
+        color:'white',
+        fontSize:responsiveFontSize(5),
+        fontWeight:'300',
+        alignSelf:'center',
+    },
+    headerImage:{
+       height:responsiveWidth(7),
+       width:responsiveWidth(7),
+    },
+    headerTitle:{
+      color:'rgb(0,163,240)',
+      fontSize:responsiveFontSize(4),
+      alignSelf:'center',
+      fontWeight:'300'
+    },
+    topView:{
+        flex:2.5,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     login:{
     	color:'white',
@@ -17,12 +32,28 @@ const styles = {
     	fontWeight:'400',
     	alignSelf:'center'
     },
+    submitButton:{
+        marginTop:responsiveHeight(2),
+        height:responsiveHeight(6),
+        alignSelf:'center',
+        borderRadius:responsiveHeight(2),
+        backgroundColor:'transparent',
+        borderColor:'rgb(0,138,220)',
+        borderWidth:1,
+        justifyContent:'center'
+    },
+    submitText:{
+        color:'rgb(0,168,220)',
+        fontSize:responsiveFontSize(3),
+        fontWeight:'300'
+    },
     username:{
     	width:'100%',
+        height: responsiveHeight(5),
     	alignSelf:'center',
     	borderBottomWidth:2,
     	borderColor:'#ddd',
-    	fontSize:20,
+    	fontSize:responsiveFontSize(1.5),
     	paddingBottom:3,
     	color:'black'
     },
@@ -33,11 +64,12 @@ const styles = {
     	borderRadius:15,
         backgroundColor:'transparent',
         borderColor:'rgb(0,138,220)',
-        borderWidth:1
+        borderWidth:1,
+        marginTop:15
     },
     forgot:{
     	color:'grey',
-    	fontSize:14,
+    	fontSize:responsiveFontSize(1.5),
     	fontWeight:'400',
     	alignSelf:'flex-start'
     },
@@ -50,13 +82,13 @@ const styles = {
     labelButtonA:{
         backgroundColor:'rgb(82,151,250)',
         borderRadius:0,
-        height: 30,
+        height: responsiveHeight(7)
     },
     labelButton:{
         backgroundColor:'rgb(0,85,227)',
         borderRadius:0,
         flex:1,
-        height: 40
+        height: responsiveHeight(7)
     },
     heads:{
         color:'white',

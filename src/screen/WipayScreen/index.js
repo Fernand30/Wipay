@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Platform,Text,Alert,ActivityIndicator,Button,TouchableHighlight,Dimensions,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
+import {Platform,Text,Alert,ActivityIndicator,Button,TouchableOpacity,TouchableHighlight,Dimensions,View, StyleSheet,ScrollView,Image,ListView,TextInput} from 'react-native';
 import styles from './styles'
 import {RkButton} from 'react-native-ui-kitten'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -20,15 +20,16 @@ class HomeScreen extends React.Component {
 
         return ({
             gesturesEnabled: false,
-            headerLeft: <TouchableHighlight onPress={params ? params.onOpenSideMenu : () => {}}>
-                            <Image style={{height:30,width:30}} source={menu} />
-                        </TouchableHighlight>,
+            headerLeft: <TouchableOpacity onPress={params ? params.onOpenSideMenu : () => {}}>
+                            <Image style={styles.headerImage} source={menu} />
+                        </TouchableOpacity>,
+            headerTitle: <Text style={styles.headerTitle}></Text>,           
             headerTitleStyle: {
-            alignItems: 'center'
+                alignItems: 'center'
             },
-            headerRight: <TouchableHighlight onPress={params ? params.onOpenSetting : () => {}}>
-                            <Image style={{height:30,width:30}} source={setting} />
-                        </TouchableHighlight>,
+            headerRight: <TouchableOpacity onPress={params ? params.onOpenSetting : () => {}}>
+                            <Image style={styles.headerImage} source={setting} />
+                        </TouchableOpacity>,
             headerStyle: {
                 backgroundColor: 'white',
                 height: 70,
@@ -84,55 +85,43 @@ class HomeScreen extends React.Component {
                         }}
                     />
                     <View style={styles.container}>
-                    <View style={{flex:5}}>
+                        <View style={{flex:5}}>
                             <Text style={styles.wipay}>WIPAY</Text>
                             <Text style={styles.login}>Account Balance</Text>
                             <Text style={styles.totalText}>$2500TT</Text>
                             <Text style={styles.forgot}>KYC Level 1</Text>
-                        <Image
-                            source={shape}
-                            style={styles.shapeImage}
-                        />
-                    </View>
-                        <View style={{flex:8,backgroundColor:'white'}}>
-                            <View style={{
-                                            flex:1,
-                                            flexDirection:'row',
-                                            justifyContent:'space-between',
-                                            paddingLeft:20,
-                                            paddingRight:20
-                                    }}>
+                            <Image
+                                source={shape}
+                                style={styles.shapeImage}
+                            />
+                        </View>
+                        <View style={{flex:7,backgroundColor:'white'}}>
+                            <View style={styles.mainView}>
                                 <RkButton style={[styles.loginButton,{backgroundColor:'rgb(0,198,250)'}]} onPress={() => {}}>
-                                    <Text style={{color:'white',fontSize:15,fontWeight:'600'}}>Request Payment</Text>
+                                    <Text style={styles.buttonText}>Request Payment</Text>
                                 </RkButton>
                                 <RkButton style={[styles.loginButton,{backgroundColor:'rgb(0,238,107)'}]} onPress={() => {}}>
-                                    <Text style={{color:'white',fontSize:15,fontWeight:'600'}}>Peer-To-Peer</Text>
+                                    <Text style={styles.buttonText}>Peer-To-Peer</Text>
                                 </RkButton>
                             </View>
                             <View style={{flex:4,paddingTop:10}}>
-                                
-                                <View style={{flexDirection:'row',justifyContent:'space-between',paddingRight:20,paddingLeft:20}}>
-                                    <Text style={{fontWeight:'700',fontSize:14}}>Date</Text>
-                                    <Text style={{fontWeight:'700',fontSize:14}}>Detail</Text>
-                                    <Text style={{fontWeight:'700',fontSize:14}}>Amount</Text>
+                                <View style={styles.paddingLayout}>
+                                    <Text style={styles.eachText}>Date</Text>
+                                    <Text style={styles.eachText}>Detail</Text>
+                                    <Text style={styles.eachText}>Amount</Text>
                                 </View>
-                                <ScrollView style={{}}>
-                                    <View style={styles.line}></View>
-                                        <View style={{flexDirection:'row',justifyContent:'space-between',paddingRight:20,paddingLeft:20}}>
-                                            <Text style={{fontWeight:'700',fontSize:14}}>2017-12-03{'\n'}13:36:43</Text>
-                                            <Text style={{fontWeight:'700',fontSize:14}}>Payment from Wicoins{'\n'}Syst(WiCoins)</Text>
-                                            <Text style={{fontWeight:'700',fontSize:14}}>$3.40TT</Text>
-                                        </View>
-                                   
-                                        
-                                    <View style={styles.line}></View>
-                                        <View style={{flexDirection:'row',justifyContent:'space-between',paddingRight:20,paddingLeft:20}}>
-                                            <Text style={{fontWeight:'700',fontSize:14}}>2017-12-03{'\n'}13:34:49</Text>
-                                            <Text style={{fontWeight:'700',fontSize:14}}>Payment to Wicoins{'\n'}Syst()</Text>
-                                            <Text style={{fontWeight:'700',fontSize:14}}>$1.00TT</Text>
-                                        </View>
-                                    
-                                </ScrollView>
+                                <View style={styles.line}></View>
+                                <View style={styles.rowView}>
+                                    <Text style={styles.eachText}>2017-12-03{'\n'}13:36:43</Text>
+                                    <Text style={styles.eachText}>Payment from Wicoins{'\n'}Syst(WiCoins)</Text>
+                                    <Text style={styles.eachText}>$3.40TT</Text>
+                                </View>
+                                <View style={styles.line}></View>
+                                <View style={styles.rowView}>
+                                    <Text style={styles.eachText}>2017-12-03{'\n'}13:34:49</Text>
+                                    <Text style={styles.eachText}>Payment to Wicoins{'\n'}Syst()</Text>
+                                    <Text style={styles.eachText}>$1.00TT</Text>
+                                </View>
                             </View>
                         </View>
                     </View>
